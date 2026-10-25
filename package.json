@@ -1,0 +1,58 @@
+{
+  "name": "flaredump",
+  "version": "0.1.0",
+  "description": "Flight recorder for Cloudflare Workers: capture failed requests to .cfreplay.json and replay offline",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "flaredump": "./dist/cli.js"
+  },
+  "main": "./dist/recorder-middleware.js",
+  "exports": {
+    ".": "./dist/recorder-middleware.js",
+    "./bridge": "./dist/bridge.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md",
+    "README.md",
+    "LICENSE",
+    "jsr.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && vitest run",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "publint": "^0.3.12",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  },
+  "author": "Augusto Cerrutti <augustocerruttisatto@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanchingyg/flaredump.git"
+  },
+  "mcpName": "io.github.kanchingyg/flaredump",
+  "homepage": "https://github.com/kanchingyg/flaredump#readme",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "cli",
+    "typescript",
+    "cloudflare",
+    "cloudflare-workers",
+    "wrangler",
+    "debugging",
+    "replay",
+    "vcr",
+    "developer-tools"
+  ]
+}
