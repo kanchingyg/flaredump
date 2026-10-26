@@ -1,0 +1,23 @@
+{
+  "name": "@kanchingyg/flaredump",
+  "version": "0.1.1",
+  "description": "Flight recorder for Cloudflare Workers: capture failed requests to .cfreplay.json and replay offline",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/recorder-middleware.ts",
+    "./bridge": "./src/bridge.ts"
+  },
+  "publish": {
+    "include": [
+      "src/**/*.ts",
+      "LICENSE",
+      "README.md",
+      "SKILL.md",
+      "jsr.json"
+    ],
+    "exclude": [
+      "src/**/*.test.ts",
+      "src/**/*.spec.ts"
+    ]
+  }
+}
