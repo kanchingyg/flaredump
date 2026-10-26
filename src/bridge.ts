@@ -1,6 +1,21 @@
+/**
+ * MCP stdio bridge for inspecting and replaying `.cfreplay.json` captures.
+ *
+ * @example
+ * ```ts
+ * import { startMcpServer } from "jsr:@kanchingyg/flaredump/bridge";
+ * ```
+ *
+ * @module
+ */
 import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const PKG_VERSION = JSON.parse(
+  readFileSync(join(dirname(fileURLToPath(import.meta.url)), "..", "package.json"), "utf8"),
+).version as string;
 
 import { resolvePathUnderRoot } from "./path-containment.js";
 import {
@@ -329,7 +344,7 @@ function handleMessage(
       result: {
         protocolVersion: "2024-11-05",
         capabilities: { tools: {} },
-        serverInfo: { name: "flaredump", version: "0.1.0" },
+        serverInfo: { name: "flaredump", version: PKG_VERSION },
       },
     });
     return;

@@ -1,3 +1,13 @@
+/**
+ * Worker middleware that writes `.cfreplay.json` on 5xx and thrown errors.
+ *
+ * @example
+ * ```ts
+ * import { withFlareDump } from "jsr:@kanchingyg/flaredump";
+ * ```
+ *
+ * @module
+ */
 import { scrubDeep } from "./scrubber.js";
 
 /** Configuration and data shape for `BindingKind` (binding kind). */

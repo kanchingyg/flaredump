@@ -6,10 +6,6 @@
 [![JSR Score](https://jsr.io/badges/@kanchingyg/flaredump/score)](https://jsr.io/@kanchingyg/flaredump/score)
 [![Runtime](https://img.shields.io/badge/runtime-Node_%7C_Bun_%7C_Deno-f9f1e1)](https://github.com/kanchingyg/flaredump)
 [![license](https://img.shields.io/github/license/kanchingyg/flaredump)](https://github.com/kanchingyg/flaredump/blob/HEAD/LICENSE)
-[![npm](https://img.shields.io/npm/v/flaredump)](https://www.npmjs.com/package/flaredump)
-[![JSR](https://jsr.io/badges/@kanchingyg/flaredump)](https://jsr.io/@kanchingyg/flaredump)
-[![Bun](https://img.shields.io/badge/runtime-Node_%7C_Bun-f9f1e1)](https://github.com/kanchingyg/flaredump)
-[![license](https://img.shields.io/github/license/kanchingyg/flaredump)](https://github.com/kanchingyg/flaredump/blob/HEAD/LICENSE)
 
 Flight recorder for Cloudflare Workers: capture failed requests (D1, KV, R2, and Workers AI reads) into `.cfreplay.json` and replay them offline in milliseconds.
 
@@ -69,12 +65,6 @@ Add to your MCP config:
   }
 }
 ```
-
-| Tool | Purpose |
-| --- | --- |
-| `inspect_cf_crash` | Request, stack, D1/KV trace (context-truncated for local models) |
-| `replay_cf_crash` | Re-run handler with deterministic mocked bindings |
-| `export_vitest_regression` | Emit a Vitest regression test (`--allow-write` or `--dry-run`) |
 
 ## Local models (Ollama / LM Studio)
 
